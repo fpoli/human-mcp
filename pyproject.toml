@@ -1,0 +1,23 @@
+[project]
+name = "memory-mcp"
+version = "0.1.0"
+description = "MCP server for long-term memory"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "markdown>=3.8.2",
+    "mcp>=1.10.0",
+    "pyside6>=6.9.1",
+]
+
+[project.scripts]
+human-mcp = "human_mcp:run_server"
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "mcp[cli]>=1.10.0",
+]
